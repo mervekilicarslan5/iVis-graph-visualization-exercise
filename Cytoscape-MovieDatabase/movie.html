@@ -1,0 +1,100 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+    <meta charset='utf-8'></meta>
+    <title>Exercise</title>
+    <link type="text/css" rel="stylesheet" href="assets/jquery.qtip.min.css" />
+    <link type="text/css" rel="stylesheet" href="assets/cytoscape-context-menus.css" />
+      <script src="assets/neo4j-driver.js"></script>
+    <script src='assets/jquery-2.2.4.js'></script>
+    <script src='assets/jquery.qtip.min.js'></script>
+     <script src="assets/jquery-3.3.1.slim.min.js"></script>
+  <script src="assets/popper.min.js"></script>
+  <script src="assets/bootstrap.min.js"></script>
+  
+ 
+
+    <script src='assets/cytoscape-qtip.js'></script>
+    
+      <script src="assets/cytoscape.js"></script>
+    <script src='assets/cytoscape-context-menus.js'></script>
+
+    <script src='main.js'></script>
+
+<script>
+     document.addEventListener('DOMContentLoaded', function(){
+        var script = document.createElement('script');
+        script.src = 'http://' + window.location.hostname + ':35729/livereload.js';
+        document.head.insertBefore( script, document.head.firstChild );
+      });
+
+    </script>
+
+ 
+    <!-- for testing with local version of cytoscape.js -->
+  
+  <script src="assets/cytoscape-cose-bilkent.js"></script>
+    
+</head>
+
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+      #cy {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    #number {
+        width: 20%;
+        height: 10%;
+        position: absolute;
+        top: 5%;
+        right: 5%;
+    }
+   #submitButton{
+    margin-top: 3px;
+     background-color: #9B30FF; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+
+   }
+    #concentricButton{
+     background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  margin-top: 3px;
+  padding: 10px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+   }
+</style>
+
+<body>
+ <div id='cy'></div>
+   
+    <div id='number'>
+        <input type='text' id='actName' placeholder="Actor Name">
+        <input type='number' min='0' id='number2' placeholder="Positive Integer">
+
+        <div id = 'but'  ><button type='button' id='submitButton' value='Submit' >Create </button></div>
+        <div id = 'but'><button type='button' id='concentricButton' value='Submit' >Change</button></div>
+    </div>
+  
+  
+ 
+</body>
+</html>
